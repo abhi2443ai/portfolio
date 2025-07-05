@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhishek's Cool Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      z-index: 1;
+      position: relative;
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      color: #888;
+    }
+  </style>
+</head>
+<body id="main-body" class="bg-light text-dark">
+
+  <!-- Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Abhishek</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-light btn-sm ms-2" onclick="toggleMode()">🌙</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1 class="display-4 fw-bold">Hey, I'm Abhishek 👋</h1>
+      <p class="lead">Web Developer | Tech Enthusiast | Creative Coder</p>
+      <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="container py-5" id="about">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="text-center mx-auto" style="max-width: 700px;">
+      I'm a passionate developer who enjoys building responsive websites, solving problems, and learning new tech. 🚀
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section class="container py-5" id="projects">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>🌐 Portfolio Website</h5>
+          <p>Responsive portfolio using Bootstrap and CSS.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>📝 To-Do App</h5>
+          <p>JavaScript-based app with local storage support.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>🎓 Student DBMS</h5>
+          <p>Database project for managing student records in SQL.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="container py-5" id="certificates">
+    <h2 class="text-center mb-4">Certificates</h2>
+    <p class="text-center">Click below to see all my certificates stored on Google Drive.</p>
+    <div class="text-center">
+      <a class="btn btn-outline-primary"
+         href="https://drive.google.com/drive/folders/1VOLtH99mu_byRLvhQA5GXeaLP_I6gQAm?usp=drive_link"
+         target="_blank">
+        🎓 View Certificates
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="container py-5" id="contact">
+    <h2 class="text-center mb-4">Contact</h2>
+    <div class="text-center">
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>Phone: +91-XXXXXXXXXX</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <small>© 2025 Abhishek — Made with 💙 using HTML, Bootstrap & JS</small>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    // ParticlesJS Inline Config (no JSON file needed!)
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Toggle Dark/Light Mode
+    function toggleMode() {
+      const body = document.getElementById('main-body');
+      if (body.classList.contains('bg-light')) {
+        body.classList.replace('bg-light', 'bg-dark');
+        body.classList.replace('text-dark', 'text-light');
+      } else {
+        body.classList.replace('bg-dark', 'bg-light');
+        body.classList.replace('text-light', 'text-dark');
+      }
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
