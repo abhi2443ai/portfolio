@@ -22,3 +22,11 @@ body {
   z-index: 0;
   background: linear-gradient(135deg, #007bff, #00c6ff);
 }
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover,
+.card:active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
