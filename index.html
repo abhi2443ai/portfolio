@@ -42,9 +42,20 @@
       text-align: center;
     }
 
-    .card {
-      border-radius: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ <script>
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('touchstart', () => {
+      card.classList.add('touched');
+    });
+
+    card.addEventListener('touchend', () => {
+      setTimeout(() => {
+        card.classList.remove('touched');
+      }, 200); // Keeps effect visible for 200ms
+    });
+  });
+</script>
+
     }
 
     footer {
